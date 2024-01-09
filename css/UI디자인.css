@@ -1,0 +1,128 @@
+:root {
+    --main-color :black;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+
+    
+}
+
+a {
+    color:black;
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+ul{
+    list-style: none; /* 목록의 스타일(앞에 붙는 점) 제거 */
+}
+
+body {
+    /* min-width/height : 화면(기기, 브라우저) 크기가 작아져도 유지해야 할 최소 크기 */
+    display: flex;
+    flex-direction: column;
+    min-width: 768px;
+    min-height: 100vh; /* 화면 높이 100% */
+}
+
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+header {
+    padding: 15px 30px; /* 상하 좌우 */
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 90%;
+    max-width: 1200px; /* 화면이 커져도 width 최대 값은 1200px */
+}
+
+.header-container>div {
+    height: 100%;
+    display: flex;
+    align-items:center ;
+}
+
+/* header 왼쪽 모든 후손 요소 */
+.header-container-center * { 
+    height: 100%;
+}
+
+ /* header 오른쪽 후손 a 태그 */
+ .header-container-right a {
+    font-weight: bold;
+    font-size: 0.8em; /* 0.8배 */
+ }
+
+nav {
+    display: flex;
+    padding: 0 15px;
+    position: sticky;
+    top: -1px; 
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar>li {
+    width: 20%;
+    height: 40px;
+
+    /* item(a) 태그 정가운데 배치 */
+    display: flex;
+    align-items: center;
+}
+
+.navbar>li>a {
+    font-size: 15px;
+    color: var(--main-color);
+    font-family:'JalnanGothic';
+    padding: 0px 10px ;
+    width: 100%;
+     /* 글자 가운데 정렬 */
+}
+
+/* 마우스가 a태그에 올라갔을 때 */
+.navbar>li>a:hover {
+    color: lightgray;
+}
+
+/* ------ main ------ */
+main {
+   display: flex;
+   justify-content: center;
+   /* border: 1px solid black; */
+}
+
+.main-container {
+    margin: 10px 100px; 
+    border: 1px solid black;
+}
+.grid {
+    width: 800px;
+    height: 200px;
+}
+
+
+
+
+
+
+
+
