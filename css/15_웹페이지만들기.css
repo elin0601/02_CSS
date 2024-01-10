@@ -195,6 +195,7 @@ main {
       자동으로 content-row의 height가 지정될 수 있도록 별도 설정을 하지 않음 */
 }
 
+
 /* 썸네일 열 */
 .thumnail-col {
     width: 400px;
